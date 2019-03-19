@@ -1,5 +1,10 @@
 <resources>
-    <string name="app_name">My Application</string>
-    <string name="edit_message">Enter a message</string>
+    <string name="app_name">Einzelprojekt</string>
+    <string name="edit_message">Enter your student number</string>
     <string name="button_send">Send</string>
+    <string name="calculate">calculate</string>
+    <string name="network_error">Netzwerkfehler</string>
+    <string name="hostname">se2-isys.aau.at</string>
+    <string name="result_title">Result</string>
+    <string name="result_ok">OK</string>
 </resources>
