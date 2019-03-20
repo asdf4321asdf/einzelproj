@@ -15,10 +15,10 @@ public class MainActivity extends AppCompatActivity {
 
         @Override
         protected String doInBackground(String... strings) {
-            TCPHelper tcpHelper = new TCPHelper(strings[0], getString(R.string.hostname), 53212);
+            TCPHelper tcpHelper = new TCPHelper(getString(R.string.hostname), 53212);
             String result;
             try {
-                result = tcpHelper.sendAndRetrieve();
+                result = tcpHelper.sendAndRetrieve(strings[0]);
             } catch (IOException e) {
                 e.printStackTrace();
                 result = getString(R.string.network_error);

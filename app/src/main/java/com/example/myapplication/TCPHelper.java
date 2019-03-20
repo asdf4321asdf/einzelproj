@@ -7,17 +7,15 @@ import java.io.InputStreamReader;
 import java.net.Socket;
 
 public class TCPHelper {
-    private String message;
     private String hostname;
     private int port;
 
-    public TCPHelper(String message, String hostname, int port) {
-        this.message = message;
+    public TCPHelper(String hostname, int port) {
         this.port = port;
         this.hostname = hostname;
     }
 
-    public String sendAndRetrieve() throws IOException {
+    public String sendAndRetrieve(String message) throws IOException {
         Socket clientSocket = new Socket(hostname, port);
 
         DataOutputStream outToServer = new DataOutputStream(clientSocket.getOutputStream());
@@ -30,5 +28,21 @@ public class TCPHelper {
         clientSocket.close();
 
         return result;
+    }
+
+    public String getHostname() {
+        return hostname;
+    }
+
+    public void setHostname(String hostname) {
+        this.hostname = hostname;
+    }
+
+    public int getPort() {
+        return port;
+    }
+
+    public void setPort(int port) {
+        this.port = port;
     }
 }
